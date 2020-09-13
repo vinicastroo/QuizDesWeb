@@ -14,8 +14,6 @@ class App {
     this.app = express();
     this.server = http.Server(this.app);
 
-    Sentry.init(sentryConfig);
-
     this.middlewares();
     this.routes();
   }

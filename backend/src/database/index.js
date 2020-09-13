@@ -3,23 +3,8 @@ import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
 
 import User from '../app/models/User';
-import UserProfile from '../app/models/UserProfile';
 
-import LiveConfig from '../app/models/LiveConfig';
-import Interested from '../app/models/Interested';
-
-import Message from '../app/models/Message';
-
-import Participant from '../app/models/Participant';
-
-const models = [
-  User,
-  UserProfile,
-  LiveConfig,
-  Interested,
-  Message,
-  Participant,
-];
+const models = [User];
 
 class Database {
   constructor() {
