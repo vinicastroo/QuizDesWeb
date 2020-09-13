@@ -9,7 +9,6 @@ module.exports = {
         password_hash,
         created_at: new Date(),
         updated_at: new Date(),
-        master: true,
       },
     ];
 
