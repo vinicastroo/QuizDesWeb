@@ -1,0 +1,3 @@
+apps:
+  - script: yarn start
+    name: server
