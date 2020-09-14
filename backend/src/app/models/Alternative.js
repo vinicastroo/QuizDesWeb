@@ -4,7 +4,7 @@ class Alternative extends Model {
   static init(sequelize) {
     super.init(
       {
-        question: Sequelize.STRING,
+        option: Sequelize.STRING,
       },
       {
         sequelize,
@@ -16,7 +16,7 @@ class Alternative extends Model {
 
   static associate(models) {
     this.belongsTo(models.Question, {
-      foreignKey: 'question_id	',
+      foreignKey: 'question_id',
       as: 'alternatives',
     });
   }

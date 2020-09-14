@@ -8,7 +8,9 @@ export default function RouteWrapper({
   isPrivate = false,
   ...rest
 }) {
-  let signed = false;
+  let token = document.cookie.split('token=')[1];
+
+  let signed = token ? true : false;
 
   if (!signed && isPrivate) {
     return <Redirect to="/" />;
