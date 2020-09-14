@@ -31,10 +31,10 @@ export const SignIn = styled.div`
     background: #fff;
     border-bottom: 1px solid #eee;
     padding: 8px;
+  }
 
-    img {
-      width: 250px;
-      padding: 16px;
-    }
+  h1 {
+    text-align: center;
+    padding: 8px;
   }
 `;

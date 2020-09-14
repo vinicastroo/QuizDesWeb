@@ -4,7 +4,11 @@ import databaseConfig from '../config/database';
 
 import User from '../app/models/User';
 
-const models = [User];
+import Question from '../app/models/Question';
+
+import Alternative from '../app/models/Alternative';
+
+const models = [User, Question, Alternative];
 
 class Database {
   constructor() {

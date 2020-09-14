@@ -2,6 +2,8 @@ import { Router } from 'express';
 
 import SessionController from './app/controllers/SessionController';
 
+import QuestionController from './app/controllers/QuestionController';
+
 import validateSessionStore from './app/validators/SessionStore';
 
 import authMiddleware from './app/middlewares/auth';
@@ -27,6 +29,8 @@ class Routes {
 
   auth() {
     this.routes.use(authMiddleware);
+
+    this.routes.get('/questions', QuestionController.index);
   }
 
   questions() {}
