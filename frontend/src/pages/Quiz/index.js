@@ -49,6 +49,7 @@ function Quiz() {
   });
 
   async function handleSubmitQuiz(data, { resetForm }) {
+    console.log(data);
 
     questions.map((question, index) => {
       localStorage.removeItem(`options${index}`);
@@ -57,6 +58,7 @@ function Quiz() {
     await api.post(`answer-question`, initialData).then(() => {
       alert('Quiz Enviado!');
     }).catch((err) => {
+      console.log(err);
       alert('Erro ao enviar o QUIZ');
     });
 
@@ -67,8 +69,8 @@ function Quiz() {
   function handleClickRadio(e, index) {
     localStorage.setItem(`options${index}`, JSON.stringify(e.target.value));
     let newArray = initialData;
-    
-    newArray[index] = e.target.value; 
+
+    newArray[index] = e.target.value;
     setInitialData([...newArray]);
   }
 

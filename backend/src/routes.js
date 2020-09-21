@@ -30,7 +30,7 @@ class Routes {
   }
 
   auth() {
-    //this.routes.use(authMiddleware);
+    this.routes.use(authMiddleware);
 
     this.routes.get('/questions', QuestionController.index);
 
