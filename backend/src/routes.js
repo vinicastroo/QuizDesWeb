@@ -6,6 +6,8 @@ import QuestionController from './app/controllers/QuestionController';
 
 import validateSessionStore from './app/validators/SessionStore';
 
+import QuestionUserController from './app/controllers/QuestionUserController';
+
 import authMiddleware from './app/middlewares/auth';
 
 class Routes {
@@ -28,9 +30,11 @@ class Routes {
   }
 
   auth() {
-    this.routes.use(authMiddleware);
+    //this.routes.use(authMiddleware);
 
     this.routes.get('/questions', QuestionController.index);
+
+    this.routes.post('/answer-question', QuestionUserController.create);
   }
 
   questions() {}

@@ -8,7 +8,9 @@ import Question from '../app/models/Question';
 
 import Alternative from '../app/models/Alternative';
 
-const models = [User, Question, Alternative];
+import QuestionUser from '../app/models/QuestionUser';
+
+const models = [User, Question, Alternative, QuestionUser];
 
 class Database {
   constructor() {
